@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-
+//this is a test
 class Term {
     /**
      * name of term.
