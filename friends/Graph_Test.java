@@ -213,12 +213,36 @@ public class Graph_Test {
 
 	public static void shortest(String start, String target, Person[] zoo)throws IOException {
 		Person perStart = null;
+		Stack printStack = new Stack();
 		int startDex = -1;
-		for(int i=0; i<zoo.length;i++){
+		for(int i=0; i<zoo.length;i++){ // frinds the start person
 			if(zoo[i].name.equals(start)){
 				perStart = zoo[i];
 				startDex = i;
+				zoo[i].zooIndex= i;
 			}
+		Queue <int newQ= new Queue <int>;
+		newQ.add i; // add the start person to queue for BFS
+		while (!newQ.isEmpty){
+			zoo[newQ.peek].visited = true;
+			person parent = zoo{newQ.pull];
+			friendDex ptr = parent.front;
+			while (ptr!=null){ //move through friends
+			if (zoo[ptr.frinedNum].visted = false){
+				zoo[ptr.friendNum].zooIndex = ptr.index;
+				zoo[ptr.FreindNum].shortest = parent.zooIndex;
+			else{ptr = ptr.next}
+			if (target=zoo[ptr.friendNum].name){ // target is found
+				person ptr2 = zoo[ptr.frinedNum];
+				while (ptr2.zooIndex != perstart.zooIndex){
+					printStack.push.ptr2.name;
+					ptr2=ptr2.shortest;
+				}
+			}else {newQ.add ptr.friend;
+			ptr=ptr.next;			
+			}	
+			}
+		}
 
 			//Queue<Friendex> newQ = new Queue<Friendex>();
 			Queue<Friendex> myq = new LinkedList<Friendex>();
