@@ -93,6 +93,9 @@ public class Graph_Test {
 			}
 		}
 	}
+	public static hastable (person [] zoo){
+	Hashtable hash = new HashTable <String, Ineteger> (zoo.size);
+	}
 	
 	public static Person[] build(String[] people, ArrayList<String> friends){
 		Person[] zoo = new Person[people.length];
@@ -107,7 +110,8 @@ public class Graph_Test {
 				school=raw.substring(raw.lastIndexOf('|')+1, raw.length());	//get the schoolname
 			}
 			Person body = new Person(name, school, null, false, -1,-1,-1,-1);	//create a new person
-			zoo[i]= body;							//put him in the zoo
+			zoo[i]= body;	//put him in the zoo
+			hash.put(body.name, new Integer(i)) // this is new
 		}
 
 		for(int j=0; j<friends.size()-1; j++){		//go through the friends
